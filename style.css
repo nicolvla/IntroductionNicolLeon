@@ -1,0 +1,106 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 12px;
+    background-color: #d84b20;
+}    
+
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+}
+
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
+}
+   
+body{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container{
+    position: fixed;
+    top: 70px;
+    right: 50px;
+    width: 50%;
+    padding: 20px;
+    text-align: justify;
+}
+
+h1{
+    text-align: left;
+    top: 10px;
+    left: 100px;
+    font-family: Open Sans;
+    font-weight: lighter;
+    font-size: 25px;
+    position: absolute;
+}
+
+h4{
+    position: fixed;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-family: Open Sans;
+    font-weight: normal;
+}
+
+#leadphoto{
+    position: absolute;
+    display: block;
+    top: 100px;
+    left: 100px;
+    object-fit: cover;
+}
+
+p {
+    margin-top: 20px; /* Margen entre los párrafos */
+    font-size: 30px; /* Tamaño de la fuente */
+    }
+
+li{
+    font-size: 20px;
+}
+
+.italic { font-style: italic; }
+
+a {
+    color: black; /* Color de los hipervínculos no visitados */
+    text-decoration: none; /* Elimina el subrayado por defecto */
+}
+
+    /* Cambiar el color cuando el hipervínculo es visitado */
+a:visited {
+      color: black; /* Color de los hipervínculos visitados */
+}
